@@ -10,9 +10,7 @@ def selection_sort(array):
   puts it in the first position. Then, it chooses the second smallest element and 
   stores it in the second position, and so on until the array is sorted.
   """
-  
-  if len(array) == 0:
-      raise ValueError()
+
   for i in range(0, len(array)):
     menor = i
     for j in range(i + 1, len(array)):
@@ -22,6 +20,15 @@ def selection_sort(array):
     array[i] = array[menor]
     array[menor] = aux
 
-lista = [2, 3, 6, 5, 7, 1, 4, 10, 8, 9]
-selection_sort(lista)
-print(lista)
+def main():
+
+    """ Simula a entrada e a saída de dados. """
+
+    entrada = input().replace(" ", "")
+    lista = []
+    for e in entrada:
+        lista.append(int(e))
+    selection_sort(lista)
+    print(lista)
+
+main()
