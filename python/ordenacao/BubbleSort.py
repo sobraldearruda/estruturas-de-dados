@@ -24,10 +24,8 @@ def main():
 
     """ Simula a entrada e a saída de dados. """
 
-    entrada = input().replace(" ", "")
-    lista = []
-    for e in entrada:
-        lista.append(int(e))
+    entrada = input().split()
+    lista = [int(e) for e in entrada]
     bubble_sort(lista)
     print(lista)
 

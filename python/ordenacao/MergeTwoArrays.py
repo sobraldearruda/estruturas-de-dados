@@ -31,14 +31,10 @@ def main():
 
     """ Simula a entrada e a saída de dados. """
 
-    entrada1 = input().replace(" ", "")
-    lista1 = []
-    for e in entrada1:
-        lista1.append(int(e))
-    entrada2 = input().replace(" ", "")
-    lista2 = []
-    for e in entrada2:
-        lista2.append(int(e))
+    entrada1 = input().split()
+    lista1 = [int(e) for e in entrada1]
+    entrada2 = input().split()
+    lista2 = [int(e) for e in entrada2]
     merge(lista1, lista2)
 
 main()

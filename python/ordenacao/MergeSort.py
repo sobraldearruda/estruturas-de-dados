@@ -43,10 +43,8 @@ def main():
 
     """ Simula a entrada e a saída de dados. """
 
-    entrada = input().replace(" ", "")
-    lista = []
-    for e in entrada:
-        lista.append(int(e))
+    entrada = input().split()
+    lista = [int(e) for e in entrada]
     merge_sort(lista, 0, len(lista) - 1)
     print(lista)
 
