@@ -19,7 +19,7 @@ def counting_sort(array):
      count[array[i]] += 1
   for i in range(1, len(count)):
      count[i] += count[i - 1]
-  aux = [0] * (len(array) + 1)
+  aux = [0] * (len(array))
   for i in range(len(array) - 1, -1, -1):
      aux[count[array[i]] - 1] = array[i]
      count[array[i]] -= 1
@@ -31,7 +31,6 @@ def main():
     """ Simula a entrada e a saída de dados. """
 
     entrada = input().split()
-    lista = []
     lista = [int(e) for e in entrada]
     counting_sort(lista)
     print(lista)
