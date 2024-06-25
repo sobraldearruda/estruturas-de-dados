@@ -11,7 +11,7 @@ def insertion_sort(array):
   right position for the current element and insert it there.
   """
   
-  for i in range(0, len(array)):
+  for i in range(1, len(array)):
        key = array[i]
        aux = i - 1
        while (aux >= 0 and array[aux] > key):
