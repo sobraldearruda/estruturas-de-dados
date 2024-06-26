@@ -36,7 +36,6 @@ public class MergeSort {
     }
 
     private static void mergeSort(int[] array, int left, int right) {
-        output(array, left, right);
         if (left >= 0 && left < right && right < array.length) {
             int mid = (left + right) / 2;
             mergeSort(array, left, mid);

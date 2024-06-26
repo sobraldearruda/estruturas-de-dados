@@ -20,14 +20,12 @@ def merge(array, left, mid, right):
    
    """ Merge two sorted lists. """
 
-   aux = [0] * len(array)
-   for n in range(0, len(array)):
-      aux[n] = array[n]
+   aux = [e for e in array]
    i = left
    j = mid + 1
    k = left
    while (i <= mid and j <= right):
-      if (array[i] <= array[j]):
+      if (aux[i] <= aux[j]):
          array[k] = aux[i]
          i += 1
       else:
