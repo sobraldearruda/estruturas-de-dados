@@ -41,7 +41,7 @@ public class CountingSort {
 			count[array[i]]--;
 		}
 		for (int i = left; i <= right; i++) {
-			array[i] = aux[i];
+			array[i] = aux[i - left];
 		}
 	}
     
